@@ -1,7 +1,7 @@
 use std::env;
 
 use futures::StreamExt;
-use telegram_bot::*;
+use pw_telegram_bot_fork::*;
 
 fn print_member(
     op: &str,

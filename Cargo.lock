@@ -499,6 +499,36 @@ dependencies = [
 ]
 
 [[package]]
+name = "pw-telegram-bot-fork"
+version = "0.9.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "77c8123112b17eb4d0d205b0089ddebfb33102dd2df5cd4cf44985a4438e3563"
+dependencies = [
+ "bytes",
+ "futures",
+ "hyper",
+ "hyper-tls",
+ "multipart",
+ "pw-telegram-bot-raw-fork",
+ "tokio",
+ "tracing",
+ "tracing-futures",
+]
+
+[[package]]
+name = "pw-telegram-bot-raw-fork"
+version = "0.9.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "567897bc0f5896807d0d8cd062a435323807f8f18a1756a39ef89ebe1426ac7d"
+dependencies = [
+ "bytes",
+ "serde",
+ "serde-value",
+ "serde_derive",
+ "serde_json",
+]
+
+[[package]]
 name = "quote"
 version = "1.0.18"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -674,34 +704,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "telegram-bot"
-version = "0.9.0"
-source = "git+https://github.com/telegram-rs/telegram-bot.git#65ad5cfd578e9a1260ce6daac714eb2153c0bec7"
-dependencies = [
- "bytes",
- "futures",
- "hyper",
- "hyper-tls",
- "multipart",
- "telegram-bot-raw",
- "tokio",
- "tracing",
- "tracing-futures",
-]
-
-[[package]]
-name = "telegram-bot-raw"
-version = "0.9.0"
-source = "git+https://github.com/telegram-rs/telegram-bot.git#65ad5cfd578e9a1260ce6daac714eb2153c0bec7"
-dependencies = [
- "bytes",
- "serde",
- "serde-value",
- "serde_derive",
- "serde_json",
-]
-
-[[package]]
 name = "tempfile"
 version = "3.3.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -720,7 +722,7 @@ name = "tg-join-leave-bot"
 version = "0.1.0"
 dependencies = [
  "futures",
- "telegram-bot",
+ "pw-telegram-bot-fork",
  "tokio",
 ]
 

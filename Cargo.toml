@@ -3,7 +3,10 @@ name = "tg-join-leave-bot"
 version = "0.1.0"
 edition = "2021"
 
+description = "Removes join and leave messages in Telegram groups."
+license = "MIT"
+
 [dependencies]
 futures = "0.3.21"
-telegram-bot = { version = "0.9.0", git = "https://github.com/telegram-rs/telegram-bot.git" }
+pw-telegram-bot-fork = "0.9.0"
 tokio = { version = "1.17.0", features = [ "macros", "rt", "rt-multi-thread" ] }
